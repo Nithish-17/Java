@@ -1,0 +1,173 @@
+🟢 1️⃣ Creating Streams
+    list.stream();                  // Collection
+    list.parallelStream();          // Parallel stream
+    Arrays.stream(arr);             // Array
+    Stream.of(1,2,3);               // Values
+    Stream.generate(() -> 1);       // Infinite
+    Stream.iterate(1, n -> n+1);    // Infinite
+
+
+🟢 2️⃣ Intermediate Operations (Return Stream)
+
+    ➡️ Lazy execution
+    ➡️ Can be chained
+
+    🔵 Filtering
+    filter(Predicate)
+    distinct()
+    limit(n)
+    skip(n)
+
+    Example :    stream.filter(x -> x > 5)
+
+
+🔵 Mapping (Transform)
+    map(Function)
+    mapToInt()
+    mapToDouble()
+    mapToLong()
+    flatMap(Function)
+
+
+    Example:
+        map(x -> x*x)
+        flatMap(list -> list.stream())
+
+
+🔵 Sorting
+    sorted()
+    sorted(Comparator)
+
+    Example: sorted((a,b) -> b-a)
+
+
+🔵 Peek (Debugging)
+    peek(System.out::println)
+
+    (used to inspect values)
+
+
+🟢 3️⃣ Terminal Operations (END Stream)
+    🔴 Iteration
+    forEach()
+    forEachOrdered()
+
+    🔴 Collect (MOST IMPORTANT)
+    collect(Collectors.toList())
+    collect(Collectors.toSet())
+    collect(Collectors.toMap())
+
+    🔴 Reduce (Aggregation)
+    reduce(identity, accumulator)
+    reduce(BinaryOperator)
+
+        Example:
+        reduce(0, (a,b) -> a+b)
+
+🔴 Counting / Min / Max
+count()
+min(Comparator)
+max(Comparator)
+
+🔴 Find Operations
+findFirst()
+findAny()
+
+
+(Returns Optional)
+
+🔴 Matching
+anyMatch()
+allMatch()
+noneMatch()
+
+🟢 4️⃣ Collectors Cheat Sheet (VERY IMPORTANT)
+Convert
+toList()
+toSet()
+toMap()
+
+Grouping
+groupingBy(keyMapper)
+
+
+Example:
+
+Collectors.groupingBy(Student::getDept)
+
+Counting by Group
+groupingBy(key, counting())
+
+Summing / Averaging
+summingInt()
+averagingInt()
+summarizingInt()
+
+Joining Strings
+joining()
+joining(", ")
+
+Partitioning (true / false)
+partitioningBy(predicate)
+
+🟢 5️⃣ Primitive Streams (Performance)
+IntStream
+LongStream
+DoubleStream
+
+
+Useful methods:
+
+sum()
+average()
+range()
+rangeClosed()
+
+
+Example:
+
+IntStream.range(1,10)
+
+🟢 6️⃣ Optional (Used with Streams)
+isPresent()
+get()
+orElse()
+orElseThrow()
+ifPresent()
+
+
+Example:
+
+stream.findFirst().orElse(0);
+
+🟢 7️⃣ Method References (Cleaner Syntax)
+Class::staticMethod
+object::instanceMethod
+Class::new
+
+
+Example:
+
+System.out::println
+
+🟢 8️⃣ Parallel Streams
+parallelStream()
+
+
+⚠️ Use only for large data.
+
+🟢 9️⃣ Most Common Real Pattern (MEMORIZE)
+collection.stream()
+          .filter()
+          .map()
+          .sorted()
+          .collect(Collectors.toList());
+
+🟢 🔥 10️⃣ SUPER QUICK MEMORY MAP
+CREATE
+  ↓
+filter / map / flatMap / sorted
+  ↓
+collect / reduce / count / find
+
+
