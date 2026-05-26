@@ -6,18 +6,23 @@ import java.util.regex.Pattern;
 
 public class Split {
 
-    /*there are 3 types of split on a string in java
+
+    /*
+    there are 3 types of split on a string in java
     1.StringTokenizer
     2.String.split()
     3.Pattern.split()
-*/
+    */
+
+
+
     static void main() {
         String sentence = "http:www.google.com";
 
 
         //1.String Tokenizer -- old without regex
 
-        StringTokenizer st = new StringTokenizer(sentence); // has 3 constructor single parameter default delimiter is space
+        StringTokenizer st1 = new StringTokenizer(sentence); // has 3 constructor single parameter default delimiter is space
         StringTokenizer st2 = new StringTokenizer(sentence, "."); //specify the delimiter
         StringTokenizer st3 = new StringTokenizer(sentence, ".",true); // includes the delimiter also
 

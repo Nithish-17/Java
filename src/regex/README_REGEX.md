@@ -29,8 +29,7 @@ A structured and spacious README based on your handwritten notes.
   `\D`           Not Digit        `\D`             Matches anything except
                                                    digits
 
-  `\w`           Word Character   `\w+`            Letters + digits +
-                                                   underscore (`_`)
+  `\w`           Word Character   `\w+`            equivalent to [a-zA-Z0-9_] and w+ groups them together until space or other letters come
 
   `\W`           Not Word         `\W`             Opposite of `\w`
                  Character                         
