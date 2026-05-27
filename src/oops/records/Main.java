@@ -40,6 +40,8 @@ import java.util.Objects;
 //    }
 //}
 
+
+// ------------- record cannot be inherited becuase it if final  -----------------
 record Student(int age,String name){
     //we can have static variables and functions
 

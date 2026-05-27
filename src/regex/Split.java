@@ -42,11 +42,15 @@ public class Split {
 
 
 
+
         //3. Pattern split -- using compiled regex faster
         //same we can split using pattern with compiled regex with faster
         Pattern pattern = Pattern.compile("\\.|:");
         String[] patternMatches = pattern.split(sentence);
         System.out.println(Arrays.toString(patternMatches));
+
+
+
 
     }
 }

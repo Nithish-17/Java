@@ -1,0 +1,45 @@
+-----------------------------✅ Core abstract methods------------------------------------------------
+
+            int size()
+            boolean isEmpty()
+            boolean contains(Object o)
+            Iterator<E> iterator()
+            Object[] toArray()
+            <T> T[] toArray(T[] a)
+            boolean add(E e)
+            boolean remove(Object o)
+            boolean containsAll(Collection<?> c)
+            boolean addAll(Collection<? extends E> c)
+            boolean removeAll(Collection<?> c)
+            boolean retainAll(Collection<?> c)
+            void clear()
+
+
+------------------------------⚙️ Default methods (Java 8+)------------------------------------------------
+
+            boolean removeIf(Predicate<? super E> filter)
+            Spliterator<E> spliterator()
+            Stream<E> stream()
+            Stream<E> parallelStream()
+            void forEach(Consumer<? super E> action)
+
+
+----------------------------🧠 Methods inherited from Object----------------------------------
+
+            boolean equals(Object o)
+            int hashCode()
+            String toString()
+
+
+-------------------------------Sequenced Collection-----------------------------------------
+
+            addFirst()
+            addLast()
+            getFirst()
+            getLast()
+            removeFirst()
+            removeLast()
+
+
+
+================ some of the methods were partially or fully implemented inside the abstract collection==================
