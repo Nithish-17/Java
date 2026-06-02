@@ -1,13 +1,11 @@
 package collection.list;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.SequencedCollection;
+import java.util.*;
 
 /*
    internally using object array
     ArrayList is not thread-safe to make Collections.synchronizedList()
-    Eg : List<String> synlist = Collections.synchronizedList(list);
+    Eg : List<String> syn_list = Collections.synchronizedList(list);
 
 
     ArrayList constructor has 3 types
@@ -36,6 +34,8 @@ import java.util.SequencedCollection;
 
      it is fail fast
 
+     ArrayList class implements List, RandomAccess, Cloneable, and Serializable interfaces.
+
 
 */
 
@@ -52,6 +52,7 @@ public class ArrayListExample {
 
         list.remove(Integer.valueOf(5));
         list.remove(0); // list.removeFirst()
+
 
         list.add(0,1);
 

@@ -1,0 +1,14 @@
+------------------------------Arrays utility class---------------------------------
+
+        Arrays.asList() → Convert array to list
+        Arrays.sort() → Sort arrays
+        Arrays.binarySearch() → Search in arrays
+        Arrays.equals() → Compare arrays
+        Arrays.fill() → Fill array with value
+
+
+------------------------------java.util.Objects--------------------------------------
+
+    Objects.equals(a, b) → Safe equality check
+    Objects.hash() → Hash code generation
+    Objects.isNull() / nonNull()

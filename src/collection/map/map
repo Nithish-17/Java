@@ -1,0 +1,69 @@
+In Java, the Map Interface is part of the java.util package
+
+represents a collection of key-value pairs, where Keys should be unique, but values can be duplicated.
+
+It provides efficient retrieval, insertion, and deletion operations based on keys.
+
+HashMap and LinkedHashMap allow one null key, and TreeMap does NOT allow null keys (if natural ordering is used).
+
+Use ConcurrentHashMap for thread-safe operations, or Collections.synchronizedMap() to make an existing map synchronized.
+
+
+
+| Method                                                                                 | Action Performed                                                                                                                    |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `clear()`                                                                              | This method is used in Java Map Interface to clear and remove all of the elements or mappings from a specified Map collection.      |
+| `containsKey(Object)`                                                                  | Checks if a key exists in the map.                                                                                                  |
+| `containsValue(Object)`                                                                | Checks if a value exists in the map.                                                                                                |
+| `entrySet()`                                                                           | Returns a set view of the map’s key-value pairs.                                                                                    |
+| `equals(Object)`                                                                       | Compares two maps for equality.                                                                                                     |
+| `get(Object)`                                                                          | Returns the value for the given key, or null if not found.                                                                          |
+| `hashCode()`                                                                           | This method is used in Map Interface to generate a hashCode for the given map containing keys and values.                           |
+| `isEmpty()`                                                                            | This method is used to check if a map is having any entry for key and value pairs. If no mapping exists, then this returns true.    |
+| `keySet()`                                                                             | Returns a set view of the keys in the map.                                                                                          |
+| `put(Object, Object)`                                                                  | This method is used in Java Map Interface to associate the specified value with the specified key in this map.                      |
+| `putAll(Map)`                                                                          | This method is used in Map Interface in Java to copy all of the mappings from the specified map to this map.                        |
+| `remove(Object)`                                                                       | This method is used in Map Interface to remove the mapping for a key from this map if it is present in the map.                     |
+| `size()`                                                                               | This method is used to return the number of key/value pairs available in the map.                                                   |
+| `values()`                                                                             | Returns a collection view of the map’s values.                                                                                      |
+| `getOrDefault(Object key, V defaultValue)`                                             | Returns the value to which the specified key is mapped, or `defaultValue` if this map contains no mapping for the key.              |
+| `merge(K key, V value, BiFunction<? super V,? super V,? extends V> remappingFunction)` | If the specified key is not already associated with a value or is associated with null, associate it with the given non-null value. |
+| `putIfAbsent(K key, V value)`                                                          | Adds a mapping only if the key is not already mapped.                                                                               |
+
+
+replaceAll(lambda) -- updates every entry in map
+replace(k,v) -- replace the value if the key exits
+replace(k,old value, new value) -- replace only the key have the old value
+computeIfAbsent
+computeIfPresent
+compute
+
+
+
+            ------------------ NavigableMap function ----------------
+| Method                                                                   | Returns           | Meaning                          |
+| ------------------------------------------------------------------------ | ----------------- | -------------------------------- |
+| `lowerKey(K key)`                                                        | K                 | Greatest key **< key**           |
+| `floorKey(K key)`                                                        | K                 | Greatest key **≤ key**           |
+| `higherKey(K key)`                                                       | K                 | Smallest key **> key**           |
+| `ceilingKey(K key)`                                                      | K                 | Smallest key **≥ key**           |
+| `lowerEntry(K key)`                                                      | Map.Entry<K,V>    | Entry with key **< key**         |
+| `floorEntry(K key)`                                                      | Map.Entry<K,V>    | Entry with key **≤ key**         |
+| `higherEntry(K key)`                                                     | Map.Entry<K,V>    | Entry with key **> key**         |
+| `ceilingEntry(K key)`                                                    | Map.Entry<K,V>    | Entry with key **≥ key**         |
+| `firstKey()`                                                             | K                 | Smallest key                     |
+| `lastKey()`                                                              | K                 | Largest key                      |
+| `firstEntry()`                                                           | Map.Entry<K,V>    | Smallest entry                   |
+| `lastEntry()`                                                            | Map.Entry<K,V>    | Largest entry                    |
+| `pollFirstEntry()`                                                       | Map.Entry<K,V>    | Removes + returns smallest entry |
+| `pollLastEntry()`                                                        | Map.Entry<K,V>    | Removes + returns largest entry  |
+| `descendingMap()`                                                        | NavigableMap<K,V> | Reverse-order view               |
+| `descendingKeySet()`                                                     | NavigableSet<K>   | Reverse-order keys               |
+| `navigableKeySet()`                                                      | NavigableSet<K>   | Sorted key set                   |
+| `subMap(K fromKey, K toKey)`                                             | NavigableMap<K,V> | Keys in range `[fromKey, toKey)` |
+| `subMap(K fromKey, boolean fromInclusive, K toKey, boolean toInclusive)` | NavigableMap<K,V> | Range with inclusive control     |
+| `headMap(K toKey)`                                                       | NavigableMap<K,V> | Keys **< toKey**                 |
+| `headMap(K toKey, boolean inclusive)`                                    | NavigableMap<K,V> | Keys `< or ≤ toKey`              |
+| `tailMap(K fromKey)`                                                     | NavigableMap<K,V> | Keys **≥ fromKey**               |
+| `tailMap(K fromKey, boolean inclusive)`                                  | NavigableMap<K,V> | Keys `> or ≥ fromKey`            |
+

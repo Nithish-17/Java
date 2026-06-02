@@ -1,0 +1,8 @@
+| Feature                 | Comparable       | Comparator      |
+| ----------------------- | ---------------- | --------------- |
+| Package                 | java.lang        | java.util       |
+| Method                  | compareTo()      | compare()       |
+| Comparison location     | inside class     | outside class   |
+| Sorting order           | one default      | many            |
+| Modifies original class | yes              | no              |
+| Used for                | natural ordering | custom ordering |

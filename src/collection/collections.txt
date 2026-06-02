@@ -1,0 +1,36 @@
+-----------------------Sorting and ordering------------------
+
+            sort(List<T> list) → Sorts list in natural order
+            sort(List<T> list, Comparator<? super T> c) → Sort with custom logic
+            reverse(List<?> list) → Reverses list order
+            shuffle(List<?> list) → Randomly shuffles elements
+            swap(List<?> list, int i, int j) → Swaps two elements
+
+------------------------------Searching and frequency------------------------
+
+        binarySearch(List<? extends Comparable> list, key) → Binary search (list must be sorted)
+        frequency(Collection<?> c, Object o) → Count occurrences
+        min(Collection<?>) / max(Collection<?>) → Find smallest/largest element
+
+--------------------------------Creating special collections---------------------------
+
+        emptyList(), emptySet(), emptyMap() → Immutable empty collections
+        singleton(T o) → Immutable collection with one element
+        singletonList(T o), singletonMap(K, V) → Single-element structures
+        unmodifiableList(list) → Read-only wrapper
+        synchronizedList(list) → Thread-safe wrapper
+
+----------------------------------Filling and replacing-------------------------------
+
+        fill(List<? super T> list, T obj) → Replace all elements with same value
+        replaceAll(List<T> list, T oldVal, T newVal) → Replace occurrences
+
+-----------------------------------Copying---------------------------------------------
+
+        copy(dest, src) → Copy elements from source to destination list
+
+------------------------------------Thread safety and immutability-----------------------
+
+        synchronizedCollection(Collection<T> c) → Thread-safe wrapper
+        unmodifiableCollection(Collection<T> c) → Immutable view
+

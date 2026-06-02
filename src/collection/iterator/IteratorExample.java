@@ -23,7 +23,7 @@ import java.util.*;
 *           6.set() -- modify the element
 *           7.remove()
 *
-* 2.descendingIterator() --- function that only for linked list iterates from reverse
+* 2.descendingIterator() --- function that only for linked list, TreeSet, TreeMap iterates from reverse
 *               have same functions as Iterator
 *
 * 3.SplitIterator()
