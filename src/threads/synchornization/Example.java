@@ -1,8 +1,10 @@
 package threads.synchornization;
+
 public class Example {
     private static int count = 0;
     static synchronized void increment() {
         count++;
+
     }
     static void main() {
         Thread one = new Thread(() -> {
@@ -24,7 +26,8 @@ public class Example {
         threads one and two loads the variable at same time and perform operation the value was updated wronly
                 1.load
                 2.perform operations
-                3.store*/
+                3.store
+         */
         System.out.println(count);
 
     }

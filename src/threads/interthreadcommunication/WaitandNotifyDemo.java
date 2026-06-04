@@ -7,6 +7,7 @@ notifyAll()
 */
 
 public class WaitandNotifyDemo {
+
     private final Object lock = new Object();
     void Waiting() throws InterruptedException {
         synchronized(lock){

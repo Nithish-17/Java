@@ -5,11 +5,11 @@ import java.util.concurrent.*;
 public class SingleThreadExecutionDemo {
     public static void main(String[] args) {
         int input;
-        try (ExecutorService single = Executors.newSingleThreadExecutor()){ // auto closable or manually close
+        try (ExecutorService single = Executors.newSingleThreadExecutor()){
             for (int i = 0; i < 10; i++) {
                 //single.execute(new Task(i));
                 Future<?> container = single.submit(new Task(i));
-                container.get(); // ------ makes main thread wait until the taks for the single thread executor does
+                container.get(); // ------ makes main thread wait until the tasks for the single thread executor does
             }
         }
         catch (InterruptedException e) {

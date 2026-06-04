@@ -39,7 +39,7 @@ class UserThread extends Thread {
         }
     }
 }
-public class Types {
+public class DeamonThreadExample {
     static void main() {
         Thread t1 = new DaemonThread();
         Thread t2 = new UserThread();

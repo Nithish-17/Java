@@ -22,7 +22,7 @@ class B implements Runnable {
 
 public class RunnableClass {
     static void main() throws InterruptedException {
-        Thread t1 = new Thread(new A());
+    Thread t1 = new Thread(new A());
         Thread t2 = new Thread(new B(),"second"); // passing name
         Thread t3 = new Thread("three");
         t1.start();

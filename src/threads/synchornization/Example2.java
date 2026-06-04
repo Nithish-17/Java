@@ -8,7 +8,9 @@ public class Example2 {
         }
     }
     public static void main(String[] args) {
+
         Example2 example2 = new Example2();
+
         Thread one = new Thread(() -> {
             for (int i = 0; i < 10000; i++)
                 example2.increment();

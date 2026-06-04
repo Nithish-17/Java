@@ -44,8 +44,8 @@ public class Types {
         }
     }*/
 
-   /* we can also lock the particular class or object
-    if i use this or synchronized keyword to funciton it will lock the entire object and if another thread tries to access different fucnion it will not possible
+   /* we can also lock the particular class object or instance object
+    if i use this or synchronized keyword to function it will lock the entire object and if another thread tries to access different fucnion it will not possible
     so we can crate any object and use that object for that particular method
     */
 
