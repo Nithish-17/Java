@@ -1,6 +1,5 @@
 package collection.comparator_and_comparable;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +15,7 @@ class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(@NotNull Student o) {
+    public int compareTo(Student o) {
         return  this.name.compareTo(o.name);
     }
 

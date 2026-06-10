@@ -27,7 +27,6 @@ public class InvokeDemo {
         }
 
 
-
         //invoke any retuns the value of first runned task and stops the remaining task
         try(ExecutorService executorService = Executors.newFixedThreadPool(5)) {
             List<Callable<String>> task = List.of(

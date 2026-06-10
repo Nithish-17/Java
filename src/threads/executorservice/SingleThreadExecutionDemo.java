@@ -3,6 +3,7 @@ package threads.executorservice;
 import java.util.concurrent.*;
 
 public class SingleThreadExecutionDemo {
+
     public static void main(String[] args) {
         int input;
         try (ExecutorService single = Executors.newSingleThreadExecutor()){

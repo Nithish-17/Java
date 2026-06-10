@@ -4,16 +4,26 @@
                 Executor (interface)
                         │
                         ▼
-              ExecutorService (interface)
+              ExecutorService (interface) --- implemented by AbstractExecutorService and extended by two classes
+                                                    ThreadPoolExecutor,ForkJoinPool
                         │
                         ▼
         ScheduledExecutorService (interface)
+
+
+
+
+
+
+                        
+            AbstractExecutorService
                         │
                         ▼
+            
                 ThreadPoolExecutor (class)
                         │
                         ▼
-          ScheduledThreadPoolExecutor (class)
+          ScheduledThreadPoolExecutor (class) implements ScheduledExecutorService
           
         Executors -- is a class that crates the types of thread pool from ThreadPoolExecutor and ScheduledThreadPoolExecutor
 
@@ -22,6 +32,9 @@
 A beginner‑friendly README explaining **all important ExecutorService methods**, their purpose, and usage.
 
 ---
+## 🔹 What is Executor?
+
+* Executor is minimal contract which have only execute() method
 
 ## 🔹 What is ExecutorService?
 
@@ -31,6 +44,7 @@ A beginner‑friendly README explaining **all important ExecutorService methods*
 * Execute tasks asynchronously
 * Control thread lifecycle
 * Shutdown threads safely
+* Output handling
 
 It is an advanced replacement for manually creating threads using `Thread`.
 
@@ -210,12 +224,28 @@ future.get();
 
 ---
 
+### ✅ get(TIME,TIME_UNIT)
+
+Waits and retrieves result until the given 
+
+```java
+get(1000,TimeUnit.MilliSecond);
+```
+
+
+⚠ Blocks current thread until time then throws exception if result was not given.
+
+---
+
 ### ✅ cancel(boolean mayInterruptIfRunning)
 
 Cancels task.
 
 ```java
 future.cancel(true);
+
+true - cancels running or before start task
+false - cancels only waiting task
 ```
 
 ---

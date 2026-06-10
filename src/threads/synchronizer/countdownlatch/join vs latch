@@ -1,0 +1,19 @@
+1.  => join           - you must wait for the entire thread to finish.
+    => CountDownLatch - you can proceed as soon as the important step is completed.
+
+2. => join            - for n threads n joins needed
+   => CountDownLatch  - single await() function is needed
+
+3. => join            - cant use on thread pool
+   => CountDownLatch  - can be used on thread pool
+
+
+
+| Method                      | Purpose               |
+| --------------------------- | --------------------- |
+| `CountDownLatch(int count)` | initialize count      |
+| `await()`                   | wait until count = 0  |
+| `await(timeout, unit)`      | timed wait            |
+| `countDown()`               | decrease count        |
+| `getCount()`                | check remaining count |
+| `toString()`                | debug info            |

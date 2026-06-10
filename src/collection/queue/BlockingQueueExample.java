@@ -12,13 +12,14 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 
 
-        mostly used on problems like producer- consumer
+        mostly used on problems like producer - consumer
 
         1.LinkedBlockingQueue(Bounded and optional unbounded)
         2.ArrayBlockingQueue(Bounded only)
         3.LinkedBlockingDeque(double ended queue optionally bounded)
         4.DelayQueue --- explanation at last----
         5.LinkedPriorityQueue --- extension of priority queue with put and take
+        6.SynchronousQueue ---  doesn't have internal storage (direct handoff b/w threads)
 
 */
 
